@@ -1,13 +1,18 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import Style from './Intro.module.css'
 import { useRouter } from 'next/navigation'
 
 export default function IntroPage() {
     const router = useRouter()
-    let audio = new Audio("/lain/goodlook.mp3")
+
+    const [audio, setAudio] = useState(new Audio())
+    useEffect(() => {
+      setAudio(new Audio("/lain/goodlook.mp3"))
+    }, [])    
     
-    const start = () => {            
+    const start = () => {                    
         audio.play();             
         setTimeout(() => {
             router.push('/home')
