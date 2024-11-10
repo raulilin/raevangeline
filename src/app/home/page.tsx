@@ -135,7 +135,7 @@ export default function Home() {
                             <p className="w-full text-center">MMOs, JRPGs, rhythm games, souls-likes, metroidvanias, VNs, Fighting games</p>
                         </div>
                         <div className="flex items-center p-6 gap-8 border-t">                            
-                            <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer"> last.fm </a><p>Music</p> 
+                            <a href="https://www.last.fm/user/Raulilin" target="_blank" rel="noopener noreferrer"> Music </a>
                             <p className="w-full text-center">Machinel Girl, Crystal Castles, Loathe, My Bloody Valentine, Femtanyl, Black Dresses, BMTH, Sewerslvt, Goreshit, Have a Nice Life, Grimes, Ichiko Aoba, Katie Jane Garside, Blank Banshee, YABUJIN, Ecco2k</p>
                         </div>
                         <div className="flex items-center p-6 gap-8 border-t">
