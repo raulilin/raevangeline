@@ -1,20 +1,18 @@
 'use client'
 
 import { getRandomInt } from "@/lib/utils"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useRouter } from 'next/navigation'
 
 export function SFXButton() {
     const router = useRouter()
 
-    const [audio, setAudio] = useState(new Audio())
+    const audio = useRef<HTMLAudioElement | undefined>(
+        typeof Audio !== "undefined" ? new Audio("/lain/goodlook.mp3") : undefined
+      );    
 
-    useEffect(() => {
-      setAudio(new Audio("/lain/goodlook.mp3"))
-    }, [])
-    
-    const start = () => {                    
-        audio.play();             
+    const start = () => {                          
+        audio.current?.play();
         setTimeout(() => {
             router.push('/home')
             }, 2500);            
