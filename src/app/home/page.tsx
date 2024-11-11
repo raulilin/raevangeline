@@ -75,7 +75,7 @@ export default function Home() {
                         <div className="rotate-180"> ∟</div>
                         <span className="flex flex-col p-5 gap-3 text-sm xl:text-[15px] pt-auto">
                             <p> {'>'} welcome to my safe haven  </p>
-                            <p> {'>'} i'm ra (ralilith, evangeline),  </p>
+                            <p> {'>'} i'm ra (ralilith, evangeline in some places),  </p>
                         </span>                
                         <div> ∟</div>                    
                     </div>
