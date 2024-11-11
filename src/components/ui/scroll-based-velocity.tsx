@@ -43,7 +43,8 @@ export function VelocityScroll({
     const baseX = useMotionValue(0);
     const { scrollY } = useScroll();
     const scrollVelocity = useVelocity(scrollY);
-    const smoothVelocity = useSpring(scrollVelocity, {
+    //const smoothVelocity = useSpring(scrollVelocity, {
+    const smoothVelocity = useSpring(0, {
       damping: 50,
       stiffness: 400,
     });
