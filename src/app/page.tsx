@@ -3,8 +3,10 @@ import { SFXButton } from '@/components/sfxbutton'
 
 export default function IntroPage() {
     return (
-    <div className='bg-black w-screen h-screen'>
-        <div className={`${Style.fade} h-screen w-screen`}
+    <div className='bg-black w-screen h-screen '>
+
+        
+        <div className={`${Style.fade} h-screen w-screen text-justify`}
             style={{
                 backgroundImage: 'url(/lain/lainbgintro.gif)',
                 height: '100%',
@@ -12,7 +14,7 @@ export default function IntroPage() {
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: '70%',
             }}        
-        >            
+        >          
             <SFXButton/>
         </div>
     </div>

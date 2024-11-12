@@ -50,7 +50,7 @@ export default function Home() {
 
     return (
         <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
-        >
+        >     
             <Topbar></Topbar>
 
             <main className="grid md:flex">
