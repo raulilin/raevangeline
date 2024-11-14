@@ -26,6 +26,8 @@ export function Topbar() {
             {href: "https://youtu.be/NV_R2mwrQ_w", name:"Glide" },
             {href: "https://youtu.be/zL1B74qaN-c", name:"The Final Smile" },
             {href: "https://youtu.be/Cl9FQIT-6iY", name:"Remember" },
+            {href: "https://youtu.be/9qpfBtyEkEM", name:"Saihate no Sora" },
+            
             
         ]
         return songs[id]?.href + ""
