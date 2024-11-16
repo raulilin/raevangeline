@@ -3,6 +3,7 @@ import Image from "next/image";
 import fadeStyle from '../home/Fade.module.css'
 import { Topbar } from "@/components/top";
 import { useRef } from "react";
+import Form from 'next/form'
 
 export default function Guestbook() {
     const audio = useRef<HTMLAudioElement | undefined>(
@@ -26,8 +27,15 @@ export default function Guestbook() {
                              <p className="ml-auto">X</p>
                         </div>
                         <div className="rotate-180"> ∟</div>
-                        <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center">
-                            <button onClick={start} className="underline">                            
+                        <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center ">
+                        <Form action="/search" className="grid text-black">
+                            {/* On submission, the input value will be appended to 
+                                the URL, e.g. /search?query=abc */}
+                            <input name="query" />
+                            <button type="submit" className="text-white">Submit</button>
+                        </Form>
+
+                            {/* <button onClick={start} className="underline">                            
                                 WIP                            
                                 <Image src={'/nekowip.gif'}
                                     width={400}
@@ -35,7 +43,7 @@ export default function Guestbook() {
                                     alt=""
                                     unoptimized
                                 />
-                            </button>                            
+                            </button>                             */}
                         </span>                
                         <div> ∟</div>                    
                     </div>

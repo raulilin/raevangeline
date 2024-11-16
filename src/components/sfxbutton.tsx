@@ -6,10 +6,16 @@ import { useRouter } from 'next/navigation'
 import Style from './sfxbutton.module.css'
 
 export function SFXButton() {
+  const clickSfx = [
+    {value: "/lain/goodlook.mp3" },
+    {value: "/lain/lainlaugh.mp3" },
+    ]    
+    const SFX : string = clickSfx[getRandomInt(0,1)].value;
+
     const router = useRouter()
 
     const audio = useRef<HTMLAudioElement | undefined>(
-        typeof Audio !== "undefined" ? new Audio("/lain/goodlook.mp3") : undefined
+        typeof Audio !== "undefined" ? new Audio(SFX) : undefined
       );    
 
     const start = () => {                          

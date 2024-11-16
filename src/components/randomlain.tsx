@@ -19,7 +19,7 @@ export function RandomLainPic() {
     }
 
     return (
-        <div className="border-2 border-pink-900 h-full h-fit">
+        <div className="border-2 border-pink-900 h-full h-fit bg-black">
             <div className="flex border-b-2 border-pink-900 p-1 text-lg">
                 random lain(my cat) pic
                 <p className="ml-auto">X</p>

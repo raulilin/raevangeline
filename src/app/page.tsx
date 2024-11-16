@@ -7,7 +7,7 @@ export default function IntroPage() {
         {value: "url(/lain/insomnia.gif)" },
         {value: "url(/lain/lainbgintro.gif)" },
         {value: "url(/lain/lainside.gif)" },
-    ]    
+]       
     const bg : string = bgGif[getRandomInt(0,2)].value;
 
     return (

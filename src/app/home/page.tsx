@@ -49,12 +49,12 @@ export default function Home() {
     }    
 
     return (
-        <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}
+        <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}    
         >     
             <Topbar></Topbar>
 
             <main className="grid md:flex">
-                <aside className="ml-20 mt-10 border-2 border-pink-900 h-fit hidden sm:flex">
+                <aside className="ml-20 mt-10 border-2 border-pink-900 h-fit hidden sm:flex bg-black">
                     <div className="flex items-center  justify-center ">
 
                         <Image src={'/lain/lainside.png'}
@@ -67,7 +67,7 @@ export default function Home() {
                 </aside>
 
                 <section className="flex gap-5 w-full p-20 pl-5 pt-10 flex-col pr-0">
-                    <div className="border-2 border-pink-900 items-center h-fit">
+                    <div className="border-2 border-pink-900 items-center h-fit bg-black">
                         <div className="flex border-b-2 border-pink-900 p-1 text-lg">
                              WHO AM I? :0 
                              <p className="ml-auto">X</p>
@@ -80,7 +80,7 @@ export default function Home() {
                         <div> ∟</div>                    
                     </div>
 
-                    <div className="border-2 border-pink-900 h-fit">
+                    <div className="border-2 border-pink-900 h-fit bg-black">
                         <div className="flex border-b-2 border-pink-900 p-1 text-lg">
                             interests
                             <p className="ml-auto">X</p>
@@ -107,7 +107,7 @@ export default function Home() {
                 </section>    
                 
                 <section className="flex gap-5 w-full p-20 pl-5 pt-10 flex-col">
-                    <div className="border-2 border-pink-900 h-full items-center h-fit">
+                    <div className="border-2 border-pink-900 h-full items-center h-fit bg-black">
                         <Poem/>
                     </div>
 

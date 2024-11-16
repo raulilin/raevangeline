@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import { VelocityScroll } from "./ui/scroll-based-velocity";
 import Image from "next/image";
@@ -58,8 +59,16 @@ export function Topbar() {
             </div>
         </div>
 
-        <div className="hidden md:flex border-2 border-t-0 border-pink-900 text-1xl p-1 gap-1 underline">
-            <Link href={"/thoughts"}> thoughts </Link>
+        <div className="hidden md:flex border-2 border-t-0 border-pink-900 text-1xl p-1 gap-1 underline ">
+            <Link href={"/thoughts"} className="flex"> 
+                <Image src={'/new.gif'}
+                                width={30}
+                                height={5}
+                                alt=""
+                                unoptimized
+                />
+                thoughts 
+            </Link>
             | 
             <Link href={"/guestbook"}> guestbook </Link>
             |             
