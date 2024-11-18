@@ -1,6 +1,6 @@
 'use server'
 
-import { thoughts } from '@/types/thoughts';
+import { poems, songs, thoughts } from '@/types/types';
 import { createClient } from '@/utils/supabase/server';
 
 export async function getThoughts(): Promise<thoughts[] | null>  {
@@ -10,6 +10,26 @@ export async function getThoughts(): Promise<thoughts[] | null>  {
     .select()
     .returns<thoughts[]>()
   
+  return data
+}
+
+export async function getSongList(): Promise<songs[] | null>  {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from('t_songs')
+    .select()
+    .returns<songs[]>()
+  
+  return data
+}
+
+export async function getPoems(): Promise<poems[] | null>  {
+  const supabase = await createClient();
+  const { data } = await supabase
+    .from('v_poems')
+    .select()
+    .returns<poems[]>()
+    
   return data
 }
 

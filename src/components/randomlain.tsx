@@ -1,27 +1,20 @@
-import Link from "next/link";
-import { VelocityScroll } from "./ui/scroll-based-velocity";
 import Image from "next/image";
-import { getRandomInt, openInNewTab } from "@/lib/utils";
+import { getRandomInt, openInNewTab, getRandomIntCryp } from "@/lib/utils";
 import styles from '../app/home/Glitch.module.css'
 
 export function RandomLainPic() {
+    const idTest = getRandomIntCryp(0,22) + 1
 
+    
     function randomLain() : string {       
-        const id = getRandomInt(0,4) 
-        const lainpics = [
-            { id: 1, value: "/lain/catpics/lain1.png" },
-            { id: 2, value: "/lain/catpics/lain2.png" },
-            { id: 3, value: "/lain/catpics/lain3.png" },
-            { id: 4, value: "/lain/catpics/lain4.png" },
-            { id: 5, value: "/lain/catpics/lain5.png" },
-        ]
-        return lainpics[id]?.value + ""
+        const lainpic = "/catpics/"+idTest+".png"
+        return lainpic
     }
 
     return (
-        <div className="border-2 border-pink-900 h-full h-fit bg-black">
+        <div className="border-2 border-pink-900 h-full h-fit">
             <div className="flex border-b-2 border-pink-900 p-1 text-lg">
-                random lain(my cat) pic
+                random lain(my cat) pic no#{idTest + 1}
                 <p className="ml-auto">X</p>
             </div>
             <div className="flex items-center p-6 justify-center">

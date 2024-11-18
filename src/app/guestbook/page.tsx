@@ -28,14 +28,12 @@ export default function Guestbook() {
                         </div>
                         <div className="rotate-180"> ∟</div>
                         <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto justify-center text-center ">
-                        <Form action="/search" className="grid text-black">
-                            {/* On submission, the input value will be appended to 
-                                the URL, e.g. /search?query=abc */}
-                            <input name="query" />
-                            <button type="submit" className="text-white">Submit</button>
-                        </Form>
+                            {/* <Form action="/search" className="grid text-black">
+                                <input name="query" />
+                                <button type="submit" className="text-white">Submit</button>
+                            </Form> */}
 
-                            {/* <button onClick={start} className="underline">                            
+                            <button onClick={start} className="underline">                            
                                 WIP                            
                                 <Image src={'/nekowip.gif'}
                                     width={400}
@@ -43,7 +41,7 @@ export default function Guestbook() {
                                     alt=""
                                     unoptimized
                                 />
-                            </button>                             */}
+                            </button>                            
                         </span>                
                         <div> ∟</div>                    
                     </div>

@@ -7,30 +7,67 @@ import ClientPosts from "@/components/textpost";
 import { Poem } from "@/components/poem";
 import { RandomLainPic } from "@/components/randomlain";
 import ServerPosts from "@/components/textpostsvr";
+import { getRandomIntCryp } from "@/lib/utils";
 export default function Thoughts() {
 
+    const idTest = getRandomIntCryp(0,18) + 1
+
+    
+    function randomLain() : string {       
+        //const idTest = getRandomInt(0,7) + 1
+        const lainpic = "/randompics/"+idTest+".png"
+
+        const lainpics = [
+            { id: 1, value: "/lain/catpics/lain1.png" },
+            { id: 2, value: "/lain/catpics/lain2.png" },
+            { id: 3, value: "/lain/catpics/lain3.png" },
+            { id: 4, value: "/lain/catpics/lain4.png" },
+            { id: 5, value: "/lain/catpics/lain5.png" },
+            { id: 6, value: "/lain/catpics/lain6.png" },
+            { id: 7, value: "/lain/catpics/lain7.png" },
+            { id: 8, value: "/lain/catpics/lain8.png" },            
+        ]
+        //return lainpics[id]?.value + ""
+        return lainpic
+    }
+
     return (
-        <div className={`w-full flex-grow text-black font-teste bg-black ${fadeStyle.fade}`}
+        <div className={`w-full flex-grow text-black font-teste bg-black ${fadeStyle.fade} h-full`}
                 style={{
                     backgroundImage: "url(/sky3.jpg)",
-                    height: '100%',
+                    height: "100%",
+                    minHeight: "100%",
                     backgroundPosition: 'center',
                     backgroundRepeat: 'no-repeat',
-                    //backgroundSize: '70%',
+                    //backgroundSize: 'auto',
+                    backgroundSize: 'cover',
                 }}             
         >
             <Topbar/>
 
             
-            <main className="grid md:flex">             
-                <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white">
+            <main className="grid sm:grid-cols-3">
+                <section className="flex gap-5 w-full p-20 pr-5 pt-10 flex-col text-white h-fit">
                     <div className="border-2 border-white-900 h-full items-center h-fit">
                         <Poem/>
                     </div>
 
-                    <RandomLainPic/>
-                </section>                              
-                <section className="flex gap-5 w-full p-20 pl-5 pt-10 flex-col">
+                    <div className="border-2 border-white h-full h-fit">
+                        <div className="flex border-b-2 border-white p-1 text-lg">
+                            random pic no#{idTest + 1}
+                            <p className="ml-auto">X</p>
+                        </div>
+                        <div className="flex items-center p-6 justify-center">
+                            <Image src={randomLain()}
+                                width={450}
+                                height={450}
+                                alt=""
+                            />
+                        </div>            
+                    </div> 
+                </section> 
+
+                <section className="flex gap-5 w-full p-20 pl-5 pt-10 flex-col col-span-2">
                     <div className="border-2 border-white-900 items-center h-fit">
                         <div className="flex border-b-2 border-white-900 p-1 text-lg text-white">
                              thoughts... 
@@ -40,86 +77,6 @@ export default function Thoughts() {
                         <span className="grid p-5 gap-3 text-sm xl:text-[15px] pt-auto">
                             <div className={`grid`}>
                                 <ServerPosts/>
-
-                                {/* <button onClick={start} className="underline">
-                                    head empty no thoughts (for now)
-                                    <Image src={'/nekoemptyhead.gif'}
-                                        width={400}
-                                        height={400}
-                                        alt=""
-                                        unoptimized
-                                    />
-                                </button> */}
-
-                                {/* <span className={`${testStyle.div} text-white`}>
-                                <p>At the top of a building, there's a black cat</p>
-                                <p>Staring at the echo of a rusted toy</p>
-
-                                <p>In a blink of an eye, a girl falls down</p>
-                                <p>Accelerating memories are like burst open pomegranates</p>
-                                <p>My vanishing guilt</p>
-                                <p>The black cat laughs at the rusted fruit</p>
-                                <p>Chewing, stabbing, his big ears</p>
-                                <p>At the sunset, the black cat laughs at the girl's toy.</p>
-
-                                <p>It’s red... My back is like</p>
-                                <p>A shattered red glass orb  </p>
-
-                                <p>I'm falling, wrapped in happiness</p>
-                                <p>Free from despair</p>
-                                <p>The red sun is sparkling</p>
-                                <p>Waste glass, black ears</p>
-                                <p>Black paws, melody and prayers</p>
-                                <p>Embraced by the black cat, then smashed</p>
-                                <p>Forsaken gravestones, corpses turning into angels</p>
-                                </span>
-
-                                <span className={`${testStyle.div2} text-white ml-auto`}>
-                                <p>At the top of a building, there's a black cat</p>
-                                <p>Staring at the echo of a rusted toy</p>
-
-                                <p>In a blink of an eye, a girl falls down</p>
-                                <p>Accelerating memories are like burst open pomegranates</p>
-                                <p>My vanishing guilt</p>
-                                <p>The black cat laughs at the rusted fruit</p>
-                                <p>Chewing, stabbing, his big ears</p>
-                                <p>At the sunset, the black cat laughs at the girl's toy.</p>
-
-                                <p>It’s red... My back is like</p>
-                                <p>A shattered red glass orb  </p>
-
-                                <p>I'm falling, wrapped in happiness</p>
-                                <p>Free from despair</p>
-                                <p>The red sun is sparkling</p>
-                                <p>Waste glass, black ears</p>
-                                <p>Black paws, melody and prayers</p>
-                                <p>Embraced by the black cat, then smashed</p>
-                                <p>Forsaken gravestones, corpses turning into angels</p>
-                                </span>                                
-
-                                <span className={`${testStyle.div3} text-white center`}>
-                                <p>At the top of a building, there's a black cat</p>
-                                <p>Staring at the echo of a rusted toy</p>
-
-                                <p>In a blink of an eye, a girl falls down</p>
-                                <p>Accelerating memories are like burst open pomegranates</p>
-                                <p>My vanishing guilt</p>
-                                <p>The black cat laughs at the rusted fruit</p>
-                                <p>Chewing, stabbing, his big ears</p>
-                                <p>At the sunset, the black cat laughs at the girl's toy.</p>
-
-                                <p>It’s red... My back is like</p>
-                                <p>A shattered red glass orb  </p>
-
-                                <p>I'm falling, wrapped in happiness</p>
-                                <p>Free from despair</p>
-                                <p>The red sun is sparkling</p>
-                                <p>Waste glass, black ears</p>
-                                <p>Black paws, melody and prayers</p>
-                                <p>Embraced by the black cat, then smashed</p>
-                                <p>Forsaken gravestones, corpses turning into angels</p>
-                                </span>                                 */}
-
                             </div>
                         </span>                
                         <div> ∟</div>                    

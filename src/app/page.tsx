@@ -4,9 +4,11 @@ import { SFXButton } from '@/components/sfxbutton'
 
 export default function IntroPage() {
     const bgGif = [
-        {value: "url(/lain/insomnia.gif)" },
-        {value: "url(/lain/lainbgintro.gif)" },
-        {value: "url(/lain/lainside.gif)" },
+        {value: "url(/bg/1.gif)" },
+        {value: "url(/bg/2.gif)" },
+        {value: "url(/bg/3.gif)" },
+        {value: "url(/bg/4.gif)" },
+        {value: "url(/bg/5.gif)" },        
 ]       
     const bg : string = bgGif[getRandomInt(0,2)].value;
 

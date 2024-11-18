@@ -1,38 +1,11 @@
-'use client'
 import Link from "next/link";
 import { VelocityScroll } from "./ui/scroll-based-velocity";
 import Image from "next/image";
 import { getRandomInt, openInNewTab } from "@/lib/utils";
 import styles from '../app/home/Glitch.module.css'
+import { SongButton } from "./songbutton";
 
 export function Topbar() {
-
-    function randomSong() : string {       
-        const id = getRandomInt(0,16) 
-        const songs = [
-            {href: "https://www.youtube.com/watch?v=D9R2F3X8ZZY", name:"In the Arms of Flowers" },
-            {href: "https://www.youtube.com/watch?v=E1ygYzHULyc", name:"Favriel" },
-            {href: "https://www.youtube.com/watch?v=WMlS_OPw3gM", name:"For You I Hold My Breath" },
-            {href: "https://youtu.be/gm17vgmh854", name:"Sunbeams Streaming Through Leaves On The Hill" },
-            {href: "https://youtu.be/KiBLak6m-ig", name:"l'ange a contre jour" },
-            {href: "https://youtu.be/Wvlc95ZVDJU", name:"Subterranean Values" },
-            {href: "https://youtu.be/Jov3ktx1uF0", name:"Play Dead" },
-            {href: "https://youtu.be/tfGjf7jSFc8", name:"False Moon" },
-            {href: "https://youtu.be/H-fetNUKqDM", name:"Life Imitates Life" },
-            {href: "https://youtu.be/ZGCckws9SJI", name:"MURDER EVERY 1 U KNOW!" },
-            {href: "https://youtu.be/WdBd7ujTBKM", name:"Rosa" },
-            {href: "https://youtu.be/S7zHZrcHdxg", name:"So You Wanna Be A Superhero" },
-            {href: "https://youtu.be/0GYUcFIBXq4", name:"I Found The End" },
-            {href: "https://youtu.be/12mwzwUL7Vk", name:"Arabesque" },
-            {href: "https://youtu.be/NV_R2mwrQ_w", name:"Glide" },
-            {href: "https://youtu.be/zL1B74qaN-c", name:"The Final Smile" },
-            {href: "https://youtu.be/Cl9FQIT-6iY", name:"Remember" },
-            {href: "https://youtu.be/9qpfBtyEkEM", name:"Saihate no Sora" },
-            
-            
-        ]
-        return songs[id]?.href + ""
-    }
 
     return (
         <header className="p-8 pb-0">
@@ -47,14 +20,7 @@ export function Topbar() {
                 </span>
                 <span className="flex ml-auto text-sm items-center gap-3">
                     click for a random song →
-                    <button onClick={() => openInNewTab(randomSong()) }>
-                        <Image src={'/lain/eye.gif'}
-                                width={75}
-                                height={0}
-                                alt=""
-                                unoptimized
-                        />
-                    </button>
+                    <SongButton/>
                 </span>
             </div>
         </div>

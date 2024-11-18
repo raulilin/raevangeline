@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { thoughts } from '@/types/thoughts';
+import { thoughts } from '@/types/types';
 import { getThoughts } from '@/app/api';
 
 export default function ClientPosts() {
