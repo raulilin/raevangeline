@@ -4,6 +4,11 @@ export type thoughts = {
     date : string
 };
 
+export type textlog = {
+    text : string
+    id: number
+};
+
 export type songs = {
     songs_href : string
     songs_name : string

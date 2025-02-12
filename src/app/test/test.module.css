@@ -1,0 +1,10 @@
+.terminal {
+  width: 80%;
+  height: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 2px solid #FFC0CB ;
+  background-color: #100000;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}

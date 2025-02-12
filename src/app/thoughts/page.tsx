@@ -32,7 +32,7 @@ export default function Thoughts() {
     }
 
     return (
-        <div className={`w-full flex-grow text-black font-teste bg-black ${fadeStyle.fade} h-full`}
+        <div className={`font-white w-full flex-grow text-black font-teste bg-black ${fadeStyle.fade} h-full`}
                 style={{
                     backgroundImage: "url(/sky3.jpg)",
                     height: "100%",

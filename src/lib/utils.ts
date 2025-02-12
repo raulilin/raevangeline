@@ -17,3 +17,10 @@ export function openInNewTab(url: string) {
   const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
   if (newWindow) newWindow.opener = null
 }    
+
+export function addZero( i : number) {
+  if (i < 10) 
+    {return "0" + i} 
+  else 
+    {return i}
+}

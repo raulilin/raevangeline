@@ -11,7 +11,7 @@ import { NekoButton } from "@/components/nekobutton";
 
 export default function Home() {
     let sideImg = getRandomIntCryp(0,7) + 1
-    console.log(sideImg)
+    console.log(sideImg)    
 
     return (
         <div className={`w-full flex-grow text-white font-teste bg-black ${fadeStyle.fade}`}    
@@ -33,7 +33,7 @@ export default function Home() {
                 </aside>
 
                 <div className="ml-20 mt-10 border-2 border-pink-900 items-center h-fit bg-black mr-5 sm:mr-0 flex justify-center">
-                            {/* <div className="flex border-b-2 border-pink-900 p-1 text-lg">
+                            <div className="flex border-b-2 border-pink-900 p-1 text-lg">
                                 <a href="https://open.spotify.com/user/sjqqt4d7ebxsfjbs0rc827zh5?si=e79e7754e1754a83" className="underline">random playlists (click 4 spotify prof.)</a>
                                 <p className="ml-auto">X</p>
                             </div>
@@ -48,10 +48,8 @@ export default function Home() {
                                 </span>
                                 
                             </span>                
-                            <div> ∟</div>                     */}
-                        <NekoButton/>
-
-                        </div>
+                            <div> ∟</div>                     
+                </div>
 
                 </div>
                 <div className="grid grid-cols-2">
@@ -122,10 +120,10 @@ export default function Home() {
                         <RandomLainPic/>                    
                     </section>      
                 </div>             
-
             </main>
 
-
+                
+            
             <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
                 one day you'll sit in the sun and things won't feel so bad.
             </footer>
